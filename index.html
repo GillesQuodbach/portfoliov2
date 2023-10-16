@@ -13,24 +13,25 @@
       <nav class="nav">
         <ul class="nav__links">
           <li class="nav__item">
-            <a class="nav__link" href="#section--aboutme">About Me</a>
+            <a class="nav__link" href="#section-aboutme">About Me</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#section--projects">Projects</a>
+            <a class="nav__link" href="#section-projects">Projects</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#section--contact">Contact</a>
+            <a class="nav__link" href="#section-contact">Contact</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <!-- HOME SECTION -->
-    <section class="section" id="section--home">
+    <section class="section" id="section-home">
       <div class="home--presentation">
         <div class="home--presentation--name">
           <p>Gilles QUODBACH</p>
           <p>Web Developer</p>
+          <button class="btn-show-modal">Test modal</button>
         </div>
         <img
           class="home--presentation--photo"
@@ -45,12 +46,13 @@
           <p>React JS</p>
         </div>
       </div>
-      <p>Learn More</p>
+      <button class="btn-text btn-scroll-to">Learn More</button>
     </section>
     <!-- ABOUT ME SECTION -->
-    <section class="section" id="section--aboutme">
+    <section class="section" id="section-aboutme">
       <!-- TEXT ABOUT ME -->
       <div class="aboutme">
+        <h1 class="aboutme-header">ABOUT ME</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias
           rerum consectetur in cum ipsa distinctio! Reiciendis eligendi
@@ -90,7 +92,7 @@
       </div>
     </section>
     <!-- PROJECTS SECTION -->
-    <section class="section" id="section--projects">
+    <section class="section" id="section-projects">
       <!-- SLIDER -->
       <div class="slider">
         <div class="slide">
@@ -163,11 +165,30 @@
       </div>
     </section>
     <!-- CONTACT SECTION -->
-    <section class="section" id="section--contact">
+    <section class="section" id="section-contact">
+      <h2>Contact me</h2>
       <!-- CONTACT FORM -->
+      <form class="contact-form">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" />
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" />
+        <label for="email">Email</label>
+        <input type="mail" id="email" name="email" />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" cols="10">
+          Enter your text
+        </textarea>
+      </form>
     </section>
 
     <footer><p>Design by codeBash</p></footer>
+
+    <div class="modal hidden">
+      <button class="btn-close-modal">OK</button>
+      <h2>Your message was successfully send !</h2>
+    </div>
+    <div class="overlay hidden"></div>
 
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="./script.js"></script>
