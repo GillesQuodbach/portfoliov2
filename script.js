@@ -17,6 +17,15 @@ btnScrollTo.addEventListener("click", function (e) {
   sectionAboutMe.scrollIntoView({ behavior: "smooth" });
 });
 
+//NAV LINKS
+document.querySelector(".nav_links").addEventListener("click", function (e) {
+  e.preventDefault();
+  if (e.target.classList.contains("nav_link")) {
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  }
+});
+
 //Modal
 const openModal = function (e) {
   e.preventDefault();
