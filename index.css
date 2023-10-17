@@ -1,12 +1,37 @@
 header {
+  background-color: yellow;
   height: 100px;
   position: relative;
   z-index: 10000000000000000000;
+  display: flex;
+}
+
+.nav {
+  /* width: 100%; */
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.nav_links {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  padding-inline-start: 0;
+}
+
+.nav_link {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  text-decoration: none;
 }
 
 .nav.sticky {
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.95);
+  height: 100px;
 }
 
 /* SECTIONS */
@@ -82,7 +107,6 @@ header {
 .project {
   width: 65%;
   position: relative;
-  background-color: red;
 }
 
 .project::before {
@@ -126,8 +150,6 @@ header {
 
 /* FORM */
 .form-container {
-  background-color: red;
-
   max-width: 30%;
 }
 
