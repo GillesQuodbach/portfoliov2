@@ -1,18 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 header {
   background-color: yellow;
   height: 100px;
   position: relative;
   z-index: 10000000000000000000;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
 }
 
-.nav {
-  /* width: 100%; */
-  background-color: red;
+header .sticky {
+  position: fixed;
+  height: 100px;
+  background-color: yellow;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
 }
 
 .nav_links {
@@ -29,11 +48,6 @@ header {
   text-decoration: none;
 }
 
-.nav.sticky {
-  position: fixed;
-  height: 100px;
-}
-
 /* SECTIONS */
 .section {
   padding: 15rem 3rem;
@@ -46,15 +60,94 @@ header {
   transform: translateY(8rem);
 }
 
-#section-projects {
-  padding-top: 7rem;
-}
-
 #section-home {
   height: calc(100vh - 100px);
   padding: 0;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
 }
 
+.presentation-container {
+  display: flex;
+  height: 80%;
+}
+
+.home-presentation {
+  background-color: red;
+  /* padding: 4rem 4rem 2rem 2rem; */
+  width: 50%;
+  display: flex;
+  padding-left: 4rem;
+}
+
+.home-presentation-infos {
+  background-color: crimson;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10rem;
+}
+
+.home-presentation-name {
+  font-size: 4rem;
+}
+
+.home-presentation-job {
+  font-size: 2rem;
+}
+
+.home-presentation-photo {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  transform: translate(0%, 100%);
+}
+
+.home-language {
+  background-color: bisque;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  position: relative;
+}
+
+.home-language-skills-logo {
+  width: 200px;
+  height: 200px;
+}
+
+.js_logo {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.nodejs_logo {
+  height: 125px;
+  position: absolute;
+  top: 20%;
+  right: 10%;
+}
+
+.reactjs_logo {
+  position: absolute;
+  bottom: 5%;
+  left: 40%;
+}
+
+.button-contianer {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+}
+
+#section-projects {
+  padding-top: 7rem;
+}
 /* SLIDER */
 .slider {
   background-color: rgb(75, 50, 50);
