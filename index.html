@@ -9,9 +9,12 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header>
+    <header class="header" id="return-home">
       <nav class="nav">
         <ul class="nav_links">
+          <li class="nav_item">
+            <a class="nav_link" href="#return-home">Home</a>
+          </li>
           <li class="nav_item">
             <a class="nav_link" href="#section-aboutme">About Me</a>
           </li>
@@ -94,6 +97,7 @@
     <!-- PROJECTS SECTION -->
     <section class="section" id="section-projects">
       <!-- SLIDER -->
+      <h2>My Projects</h2>
       <div class="slider">
         <div class="slide">
           <div class="project">
@@ -168,18 +172,22 @@
     <section class="section" id="section-contact">
       <h2>Contact me</h2>
       <!-- CONTACT FORM -->
-      <form class="contact-form">
-        <label for="firstName">First Name</label>
-        <input type="text" id="firstName" name="firstName" />
-        <label for="lastName">Last Name</label>
-        <input type="text" id="lastName" name="lastName" />
-        <label for="email">Email</label>
-        <input type="mail" id="email" name="email" />
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" cols="10">
+      <div class="form-container">
+        <form class="contact-form" id="contact-form">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" />
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" />
+          <label for="email">Email</label>
+          <input type="mail" id="email" name="email" />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" cols="10">
           Enter your text
-        </textarea>
-      </form>
+        </textarea
+          >
+          <button class="submit">Submit</button>
+        </form>
+      </div>
     </section>
 
     <footer><p>Design by codeBash</p></footer>
