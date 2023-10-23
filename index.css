@@ -1,3 +1,6 @@
+/* font-family: 'Lato', sans-serif;
+font-family: 'Noto Sans', sans-serif; */
+
 * {
   margin: 0;
   padding: 0;
@@ -8,13 +11,24 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  /* background-color: #000; */
+  color: #fff;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(59, 59, 61, 1) 79%
+  );
+  background-clip: border-box;
+}
+
 a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 header {
-  background-color: yellow;
   height: 100px;
   position: relative;
   z-index: 10000000000000000000;
@@ -22,16 +36,21 @@ header {
   justify-content: center;
   align-items: center;
   font-size: 3rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  font-family: "Noto Sans", sans-serif;
 }
 
 header .sticky {
   position: fixed;
   height: 100px;
-  background-color: yellow;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  font-family: "Noto Sans", sans-serif;
 }
 
 .nav_links {
@@ -51,7 +70,7 @@ header .sticky {
 /* SECTIONS */
 .section {
   padding: 15rem 3rem;
-  border-top: 2px solid #000;
+  /* border-top: 2px solid #000; */
   transition: transform 1s, opacity 1s;
 }
 
@@ -60,12 +79,19 @@ header .sticky {
   transform: translateY(8rem);
 }
 
+.section-title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
 #section-home {
   height: calc(100vh - 100px);
   padding: 0;
-  background-color: aquamarine;
+
   display: flex;
   flex-direction: column;
+  font-family: "Lato", sans-serif;
 }
 
 .presentation-container {
@@ -74,7 +100,6 @@ header .sticky {
 }
 
 .home-presentation {
-  background-color: red;
   /* padding: 4rem 4rem 2rem 2rem; */
   width: 50%;
   display: flex;
@@ -82,14 +107,20 @@ header .sticky {
 }
 
 .home-presentation-infos {
-  background-color: crimson;
   display: flex;
   flex-direction: column;
   padding-top: 10rem;
+  position: relative;
+  left: 12rem;
 }
 
 .home-presentation-name {
   font-size: 4rem;
+  color: #fff;
+  font-family: "Noto Sans", sans-serif;
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
 }
 
 .home-presentation-job {
@@ -100,11 +131,10 @@ header .sticky {
   width: 300px;
   height: 300px;
   position: relative;
-  transform: translate(0%, 100%);
+  transform: translate(-50%, 100%);
 }
 
 .home-language {
-  background-color: bisque;
   width: 50%;
   display: flex;
   justify-content: center;
@@ -138,11 +168,15 @@ header .sticky {
 }
 
 .button-contianer {
-  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 20%;
+}
+
+#section-aboutme {
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
 }
 
 #section-projects {
@@ -209,7 +243,6 @@ header .sticky {
   left: -6.8rem;
   line-height: 1;
   z-index: -1;
-  background-color: yellow;
 }
 
 .dots {
