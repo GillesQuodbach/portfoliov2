@@ -45,7 +45,6 @@ headerObserver.observe(header);
 
 //! Modal
 const openModal = function (e) {
-  e.preventDefault();
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 };
@@ -163,9 +162,11 @@ document
     emailjs.sendForm("service_4xh5k5l", "template_mg03i1v", this).then(
       function () {
         console.log("SUCCESS!");
+        openModal();
       },
       function (error) {
         console.log("FAILED...", error);
+        alert("Oups, it was an error, please try again");
       }
     );
   });
