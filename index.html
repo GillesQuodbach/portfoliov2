@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -43,23 +44,20 @@
           <img
             class="home-presentation-photo"
             alt="profile-photo"
-            src="./images/profil.png"
+            src="./images/profil.jpg"
           />
         </div>
         <div class="home-language">
           <div class="home-language-image"></div>
           <div class="home-language-skills">
-            <p>Vanilla JS Addict</p>
             <img
               class="home-language-skills-logo js_logo"
               src="./images/javaScript_logo_2.svg.png"
             />
-            <p>Node JS</p>
             <img
               class="home-language-skills-logo nodejs_logo"
               src="./images/node.js_logo.svg.png"
             />
-            <p>React JS</p>
             <img
               class="home-language-skills-logo reactjs_logo"
               src="./images/react-icon.svg.png"
@@ -67,9 +65,10 @@
           </div>
         </div>
       </div>
-      <div class="button-contianer">
-        <button class="btn-text btn-scroll-to btn-learn-more">
+      <div class="button-container">
+        <button class="btn-scroll-to btn-learn-more">
           Learn More
+          <img class="learn_more_arrow" src="./images/arrow-down.svg"/>
         </button>
       </div>
     </section>
@@ -104,66 +103,40 @@
       <!-- SLIDER -->
       <h2 class="section-title section-project-title">My Projects</h2>
       <div class="slider">
-        <div class="slide">
-          <div class="project">
-            <h5 class="project_header">My project 14</h5>
+                  <div class="slide">
+                <div class="project">
+            <h5 class="project_header">My portfolio</h5>
 
-            <blockquote class="project_description">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Praesentium repellat vel ullam maiores sapiente eligendi quis quia
-              aliquid quisquam incidunt consequuntur fugit perspiciatis
-              deserunt, hic iure error et veniam optio. Illo enim maxime sequi!
-              Enim debitis fugit quis eligendi nostrum ad quod fugiat
-              perspiciatis. Id ad veniam earum? Nisi explicabo minus mollitia
-              iste dolores eveniet architecto maiores ad, itaque cum.
+                        <blockquote class="project_description">
+             
+                <p class="project_description_text">This portfolio was my first "business" project ever.
+                <br>I made it with vanilla Javascript only, because I LOVE IT !
+                <br>I practice everyday on CodeWars, go check my profil : 
+      
+                  <a class="codewars_link"  target="_blank" href="https://www.codewars.com/users/codeBash/"><img class="codewars_link_img" src="https://www.codewars.com/users/codeBash/badges/large"/></a>
+                  </p>
             </blockquote>
           </div>
         </div>
         <div class="slide">
           <div class="project">
-            <h5 class="project_header">My project 14</h5>
+            <h5 class="project_header">14 Projects</h5>
 
             <blockquote class="project_description">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Praesentium repellat vel ullam maiores sapiente eligendi quis quia
-              aliquid quisquam incidunt consequuntur fugit perspiciatis
-              deserunt, hic iure error et veniam optio. Illo enim maxime sequi!
-              Enim debitis fugit quis eligendi nostrum ad quod fugiat
-              perspiciatis. Id ad veniam earum? Nisi explicabo minus mollitia
-              iste dolores eveniet architecto maiores ad, itaque cum.
+              
+
+              <p>
+                To pass my developer certification, I had to build 14 projects, starting with a simple html/css/js project up to a complete React app, with JWT authentication, private routes, API, etc...
+                <br>
+                <p>Here is my GitHub <a target="_blank" class="github_link" href="https://github.com/GillesQuodbach">LINK</a></p>
+            </p>
+            <br>
+            <p>Actually, I'm working on my first project as a freelance developer, news are coming soon !</p>
+
             </blockquote>
           </div>
         </div>
-        <div class="slide">
-          <div class="project">
-            <h5 class="project_header">My project 14</h5>
-
-            <blockquote class="project_description">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Praesentium repellat vel ullam maiores sapiente eligendi quis quia
-              aliquid quisquam incidunt consequuntur fugit perspiciatis
-              deserunt, hic iure error et veniam optio. Illo enim maxime sequi!
-              Enim debitis fugit quis eligendi nostrum ad quod fugiat
-              perspiciatis. Id ad veniam earum? Nisi explicabo minus mollitia
-              iste dolores eveniet architecto maiores ad, itaque cum.
-            </blockquote>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="project">
-            <h5 class="project_header">My project 14</h5>
-
-            <blockquote class="project_description">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Praesentium repellat vel ullam maiores sapiente eligendi quis quia
-              aliquid quisquam incidunt consequuntur fugit perspiciatis
-              deserunt, hic iure error et veniam optio. Illo enim maxime sequi!
-              Enim debitis fugit quis eligendi nostrum ad quod fugiat
-              perspiciatis. Id ad veniam earum? Nisi explicabo minus mollitia
-              iste dolores eveniet architecto maiores ad, itaque cum.
-            </blockquote>
-          </div>
-        </div>
+       
         <button class="slider_btn slider_btn-left">
           <img class="slider-btn-image" src="./images/slider/arrow-left-circle.svg" />
         </button>

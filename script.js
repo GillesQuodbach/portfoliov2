@@ -11,13 +11,13 @@ const sectionProjects = document.querySelector("#section-projects");
 const sectionContact = document.querySelector("#section-contact");
 const nav = document.querySelector(".nav");
 
-//LEARN MORE BUTTON
+//! LEARN MORE BUTTON
 btnScrollTo.addEventListener("click", function (e) {
   const sectionAboutMeCoords = sectionAboutMe.getBoundingClientRect();
   sectionAboutMe.scrollIntoView({ behavior: "smooth" });
 });
 
-//NAV LINKS
+//! NAV LINKS
 document.querySelector(".nav_links").addEventListener("click", function (e) {
   e.preventDefault();
   if (e.target.classList.contains("nav_link")) {
@@ -26,7 +26,7 @@ document.querySelector(".nav_links").addEventListener("click", function (e) {
   }
 });
 
-//Sticky header
+//! Sticky header
 const header = document.querySelector(".header");
 const navHeight = nav.getBoundingClientRect().height;
 
@@ -43,7 +43,7 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 });
 headerObserver.observe(header);
 
-//Modal
+//! Modal
 const openModal = function (e) {
   e.preventDefault();
   modal.classList.remove("hidden");
@@ -65,7 +65,7 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-//Slider
+//! Slider
 const slider = function () {
   const slides = document.querySelectorAll(".slide");
   const btnLeft = document.querySelector(".slider_btn-left");
@@ -87,10 +87,10 @@ const slider = function () {
   const activeDot = function (slide) {
     document
       .querySelectorAll(".dots_dot")
-      .forEach((dot) => dot.classList.remove("dots_dot-active"));
+      .forEach((dot) => dot.classList.remove("dots_dot_active"));
     document
       .querySelector(`.dots_dot[data-slide="${slide}"]`)
-      .classList.add("dots_dot-active");
+      .classList.add("dots_dot_active");
   };
 
   const goToSlide = function (slide) {
@@ -145,3 +145,27 @@ const slider = function () {
 };
 
 slider();
+
+//! Contact form
+
+//Emailjs init
+(function () {
+  emailjs.init("cVy7VyizmeAS-jMc7");
+})();
+
+//Manage form
+document
+  .querySelector("#contact-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+    console.log("form submited");
+
+    emailjs.sendForm("service_4xh5k5l", "template_mg03i1v", this).then(
+      function () {
+        console.log("SUCCESS!");
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
+  });
