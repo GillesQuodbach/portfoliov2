@@ -1,16 +1,22 @@
 "use strict";
 
-const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
-const btnCloseModal = document.querySelector(".btn-close-modal");
-const btnOpenModal = document.querySelectorAll(".btn-show-modal");
-const btnScrollTo = document.querySelector(".btn-scroll-to");
+
+//Sections
 const sectionHome = document.querySelector("#section-home");
 const sectionAboutMe = document.querySelector("#section-aboutme");
 const sectionProjects = document.querySelector("#section-projects");
 const sectionContact = document.querySelector("#section-contact");
-const nav = document.querySelector(".nav");
 
+//Navigation
+const navContainer = document.querySelector(".nav");
+const navLinks = document.querySelectorAll(".nav_link");
+const btnScrollTo = document.querySelector(".btn-scroll-to");
+
+//Modal
+const modal = document.querySelector(".modal");
+const btnCloseModal = document.querySelector(".btn-close-modal");
+const btnOpenModal = document.querySelectorAll(".btn-show-modal");
 //! LEARN MORE BUTTON
 btnScrollTo.addEventListener("click", function (e) {
   const sectionAboutMeCoords = sectionAboutMe.getBoundingClientRect();
@@ -23,17 +29,19 @@ document.querySelector(".nav_links").addEventListener("click", function (e) {
   if (e.target.classList.contains("nav_link")) {
     const id = e.target.getAttribute("href");
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+    e.target.classList.remove("active");
+    e.target.classList.add("active");
   }
 });
 
 //! Sticky header
 const header = document.querySelector(".header");
-const navHeight = nav.getBoundingClientRect().height;
+const navHeight = navContainer.getBoundingClientRect().height;
 
 const stickyNav = function (entries) {
   const [entry] = entries;
-  if (!entry.isIntersecting) nav.classList.add("sticky");
-  else nav.classList.remove("sticky");
+  if (!entry.isIntersecting) navContainer.classList.add("sticky");
+  else navContainer.classList.remove("sticky");
 };
 
 const headerObserver = new IntersectionObserver(stickyNav, {
