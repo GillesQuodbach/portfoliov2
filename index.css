@@ -14,12 +14,13 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background: rgb(146, 251, 142);
+  background: rgb(59, 59, 61);
   background: radial-gradient(
     circle,
-    rgba(146, 251, 142, 0.8855917366946778) 0%,
-    rgba(98, 161, 235, 1) 100%
+    rgba(59, 59, 61, 1) 52%,
+    rgba(0, 0, 0, 1) 100%
   );
+  color: #fff;
 }
 
 .background_overlay {
@@ -78,7 +79,13 @@ header .sticky {
 }
 
 .nav_link.active {
-  background-color: red;
+  background-color: #fff;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  transition: all 0.5s linear;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: #000;
 }
 
 /* SECTIONS */
@@ -152,6 +159,7 @@ header .sticky {
 .home-presentation-job {
   font-size: 2rem;
   font-family: "Lora", serif;
+  color: #fff;
 }
 
 .home-presentation-photo {
@@ -307,6 +315,7 @@ header .sticky {
 }
 
 .slider_btn {
+  width: 3rem;
   position: absolute;
   top: 50%;
   z-index: 1000000000;
@@ -460,14 +469,28 @@ header .sticky {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 60rem;
-  background-color: #f3f3f3;
+  background-color: #a7a3a3;
   padding: 5rem 6rem;
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  transition: all 0.5s;
+  color: #000;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* transition: all 0.5s; */
 }
 
-.overlay {
+.btn-close-modal {
+  width: 3rem;
+  height: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -476,7 +499,7 @@ header .sticky {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(4px);
   z-index: 100;
-  transition: all 0.5s;
+  transition: all 0.1s;
 }
 
 .hidden {

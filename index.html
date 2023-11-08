@@ -17,16 +17,16 @@
       <nav class="nav">
         <ul class="nav_links">
           <li class="nav_item">
-            <a class="nav_link active" href="#return-home">Home</a>
+            <a class="nav_link return-home section-home active" href="#return-home">Home</a>
           </li>
           <li class="nav_item">
-            <a class="nav_link" href="#section-aboutme">About Me</a>
+            <a class="nav_link section-aboutme" href="#section-aboutme">About Me</a>
           </li>
           <li class="nav_item">
-            <a class="nav_link" href="#section-projects">Projects</a>
+            <a class="nav_link section-projects" href="#section-projects">Projects</a>
           </li>
           <li class="nav_item">
-            <a class="nav_link" href="#section-contact">Contact</a>
+            <a class="nav_link section-contact" href="#section-contact">Contact</a>
           </li>
         </ul>
       </nav>
@@ -145,12 +145,15 @@
               <p>
                 To pass my developer certification, I had to build 14 projects, starting with a simple html/css/js project up to a complete React app, with JWT authentication, private routes, API, etc...
                 <br>
+                <br>
       
                 <p>Here is my GitHub<a class="github_link"  target="_blank" href="https://github.com/GillesQuodbach"><img class="codewars_link_img" src="./images/github-mark/github-mark.svg"/></a></p>
 
             </p>
             <br>
             <p>Actually, I'm working on my first project as a freelance developer, news are coming soon !</p>
+            <br>
+            <br>
 
             </blockquote>
           
@@ -174,13 +177,13 @@
         <h2 class="section-title">Contact me</h2>
         <form class="contact-form" id="contact-form">
           <label for="firstName">First Name</label>
-          <input type="text" id="firstName" name="firstName" />
+          <input type="text" id="firstName" name="firstName" required/>
           <label for="lastName">Last Name</label>
-          <input type="text" id="lastName" name="lastName" />
+          <input type="text" id="lastName" name="lastName" required/>
           <label for="email">Email</label>
-          <input type="mail" id="email" name="email" />
+          <input type="mail" id="email" name="email" required/>
           <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" cols="10" placeholder="Enter your text"></textarea
+          <textarea id="message" name="message" rows="5" cols="10" placeholder="Enter your text" required></textarea
           >
           <button class="btn_submit">Submit</button>
         </form>
@@ -188,11 +191,12 @@
     </section>
 
     <footer><p>Design by codeBash</p></footer>
-
-    <div class="modal hidden">
+<div class="modal-overlay hidden">
+    <div class="modal">
+      <h2 class="modal-message">Your message was successfully send !</h2>
       <button class="btn-close-modal">OK</button>
-      <h2>Your message was successfully send !</h2>
     </div>
+  </div>
 
     <!-- <img class="background" src="./images/wall.jpg"/> -->
     <!-- <div class="background_overlay"></div> -->

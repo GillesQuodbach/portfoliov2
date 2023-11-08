@@ -1,6 +1,6 @@
 "use strict";
 
-const overlay = document.querySelector(".overlay");
+const overlay = document.querySelector(".modal-overlay");
 
 //Sections
 const sectionHome = document.querySelector("#section-home");
@@ -24,14 +24,39 @@ btnScrollTo.addEventListener("click", function (e) {
 });
 
 //! NAV LINKS
+//onClick
 document.querySelector(".nav_links").addEventListener("click", function (e) {
   e.preventDefault();
+
   if (e.target.classList.contains("nav_link")) {
+    e.target.classList.add("active");
     const id = e.target.getAttribute("href");
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-    e.target.classList.remove("active");
-    e.target.classList.add("active");
   }
+});
+
+//onScroll
+
+const sections = document.querySelectorAll(".section");
+console.log(sections);
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 100;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+  console.log(current);
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.classList.contains(current)) {
+      link.classList.add("active");
+    }
+  });
 });
 
 //! Sticky header
